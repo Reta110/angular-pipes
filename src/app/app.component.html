@@ -8,6 +8,7 @@
       <tr>
         <th scope="col">Variable</th>
         <th scope="col">Pipe</th>
+        <th scope="col">Descripcion</th>
         <th scope="col">Producto</th>
       </tr>
     </thead>
@@ -15,13 +16,39 @@
       <tr>
         <td>{{ nombre }}</td>
         <td> uppercase </td>
+        <td> Mayusculas </td>
         <td> {{ nombre | uppercase }} </td>
       </tr>
       <tr>
         <td>{{ nombre }}</td>
         <td> lowercase </td>
+        <td> Minusculas </td>
         <td> {{ nombre | lowercase }} </td>
+      </tr>  
+      <tr>
+        <td>{{ nombre }}</td>
+        <td> slice:3 </td>
+        <td> a partir del 3 </td>
+        <td> {{ nombre | slice:3 }} </td>
+      </tr>
+      <tr>
+        <td>{{ nombre }}</td>
+        <td> slice:0:3 </td>
+        <td> desde el 0 hasta el 3 </td>
+        <td> {{ nombre | slice:0:3 }} </td>
+      </tr>
+      <tr>
+        <td>{{ array }}</td>
+        <td> slice:1:5 </td>
+        <td> array del 1 al 3 </td>
+        <td> {{ array | slice:1:5 }} </td>
       </tr>
     </tbody>
   </table>
+
+  <h3>Slice directamente al ngFor</h3>
+  <ul>
+    <li **ngFor="let item of array | 5:20"></li>
+  </ul>
+
 </div>
